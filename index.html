@@ -1,12 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=you, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbound Run</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    ようこそ私のホームページへ
-    
+    <main class="game-shell">
+        <header class="game-header">
+            <div>
+                <p class="eyebrow">SIDE-SCROLLING ADVENTURE</p>
+                <h1>Starbound Run</h1>
+            </div>
+            <button id="restart-button" type="button">↻ リスタート</button>
+        </header>
+
+        <section class="game-card" aria-label="横スクロールアクションゲーム">
+            <div class="hud">
+                <span>★ <strong id="score">0</strong></span>
+                <span>❤ <strong id="lives">3</strong></span>
+                <span class="status" id="status">ゴールを目指そう！</span>
+            </div>
+            <canvas id="game-canvas" width="960" height="540">
+                お使いのブラウザはCanvasに対応していません。
+            </canvas>
+            <div class="controls">
+                <span><kbd>←</kbd><kbd>→</kbd> 移動</span>
+                <span><kbd>Space</kbd> ジャンプ</span>
+                <span><kbd>R</kbd> リスタート</span>
+            </div>
+        </section>
+        <p class="hint">コインを集めて、モンスターをジャンプでかわし、旗までたどり着こう。</p>
+    </main>
+    <script src="game.js"></script>
 </body>
 </html>
