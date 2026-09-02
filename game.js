@@ -34,7 +34,7 @@ function respawn() {
 }
 function update() {
     if (state !== 'playing') return;
-    const left = keys.ArrowLeft || keys.a, right = keys.ArrowRight || keys.d;
+    const left = Boolean(keys.ArrowLeft || keys.a), right = Boolean(keys.ArrowRight || keys.d);
     player.vx = (right - left) * 4.4; player.vy += .7; player.x += player.vx; player.y += player.vy;
     player.x = Math.max(0, Math.min(world.width - player.w, player.x));
     player.grounded = false;
